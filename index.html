@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Data Maker</title>
+	<link rel="stylesheet" href="style.css" media="all">
+</head>
+<body>
+	<div class="msg hide" id="msg"></div>
+	<div class="wrapper">
+		<form class="db-config" id="db-confgi" style="display:none">
+			<div class="config">
+				<label for="driver">Driver</label>
+				<input type="text" name="driver" class="driver" id="driver">
+			</div>
+			<div class="config">
+				<label for="dbip">DB IP</label>
+				<input type="text" name="dbip" class="dbip" id="dbip">
+			</div>
+			<div class="config">
+				<label for="dbport">DB Port</label>
+				<input type="text" name="dbport" class="dbport" id="dbport">
+			</div>
+			<div class="config">
+				<label for="dbname">DB Name</label>
+				<input type="text" name="dbname" class="dbname" id="dbname">
+			</div>
+			<div class="config">
+				<label for="dbuser">DB User</label>
+				<input type="text" name="dbuser" class="dbuser" id="dbuser">
+			</div>
+			<div class="config">
+				<label for="dbpswd">DB Password</label>
+				<input type="text" name="dbpswd" class="dbpswd" id="dbpswd">
+			</div>
+			<div class="config">
+				<label for="dbchar" >DB Charset</label>
+				<input type="text" name="dbchar" class="dbchar" id="dbchar">
+			</div>
+			<div class="config">
+				<input type="button" value="Save">
+			</div>
+			<div class="config">
+				<input type="reset" value="Cancel">
+			</div>
+		</form>
+		<div id="sql-wrapper" class="sql-wrapper pull-left">
+			<textarea id="sqldiv" class="sqlcontainer"></textarea>
+			<div class="sql-placeholder" id="sql-placeholder">
+				<p>使用说明:</p>
+				<ul>
+					<li>打开数据库,定位到你要操作的表</li>
+					<li>选中右下角“SQL窗口”中的SQL语句并复制到本窗口</li>
+					<li>点击右侧的“Analyze”按钮，分析即可</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sql-btns pull-right">
+			<button id="analyze" class="analyze">Analyze</button>
+			<button id="btn-form-insert" class="insert" disabled>Insert</button>
+			<button id="btn-from-update" class="update" disabled>Update</button>
+			<button id="btn-form-delete" class="delete" disabled>Delete</button>
+			<button id="btn-form-select" class="select" disabled>Select</button>
+			<button id="btn-script" class="script">Execute Script</button>
+		</div>
+		<div class="clear-fix"></div>
+		<form action="#" method="post" id="sql-form" class="sql-form pull-left">
+			<div class="inputs" id="input-data"></div>
+			<div class="inputs" id="input-condition"></div>
+			<div id="form-btns" class="btn-group hide">
+				<input type="submit">
+				<input type="reset">
+			</div>
+		</form>
+		<div class="fields-wrapper pull-left" >
+			<ul class="fields" id="fields"></ul>
+		</div>
+		<div class="clear-fix"></div>
+	</div>
+	<script src="../qa/jquery.min.js"></script>
+	<script src="maker.js"></script>
+</body>
+</html>

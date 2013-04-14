@@ -1,0 +1,237 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+div,pre{
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+	background-color: whitesmoke;
+	font-size: 14px;
+}
+.wrapper{
+	width: 80%;
+	min-height: 100%;
+	_height: 100%;
+	padding: 10px;
+	margin: 0 auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+	box-shadow: 0 1px 4px rgba(0,0,0,.065);
+}
+.pull-left{
+	float: left;
+}
+.pull-right{
+	float: right;
+}
+.pull-left:after,.pull-right:after{
+	content: "";
+	display: block;
+	clear: both;
+	float: none;
+}
+.clear-fix{
+	clear: both;
+	float: none;
+}
+.align-center{
+	text-align: center;
+}
+input[type="text"],input[type="password"]{
+	width: 200px;
+}
+input[type="button"],button{
+	margin: 0;
+	font-size: 100%;
+	vertical-align: middle;
+	*overflow: visible;
+	line-height: normal;
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+input[type="text"],input[type="password"]{
+	display: inline-block;
+	height: 20px;
+	padding: 2px 4px;
+	margin-bottom: 4px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #555;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	 -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	-webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+	 -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+	   -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+	      transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+input[type="text"]:focus,input[type="password"]:focus{
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0;
+	outline: thin dotted \9;
+	/* IE6-9 */
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	 -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+	      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+b{
+	font-weight: 700;
+	color: red;
+}
+.hide{
+	display: none;
+}
+.span1{
+	width: 100px;
+}
+.span2{
+	width: 150px;
+}
+.span3{
+	width: 200px;
+}
+.tips{
+	margin-bottom: 6px;
+	padding: 4px;
+	background-color: #ccc;
+	border: 1px dashed #777;
+	text-align: center;
+	cursor: default;
+}
+.sql-wrapper{
+	position: relative;
+	height: 240px;
+	width: 88%;
+	margin: 0;
+	padding: 0;
+}
+.sql-btns{
+	width: 11%;
+	height: 200px;
+	text-align: center;
+}
+.sql-btns button{
+	height: 40px;
+	width: 100%;
+	margin: 0;
+}
+.sql-btns button.active{
+	background-color: #08c;
+}
+.sqlcontainer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 95%;
+	width: 99%;
+	border: 2px solid #076;
+	margin: 0;
+	padding: 4px;
+	line-height: 16px;
+	background-color: #fff;
+	overflow-x: hidden;
+	overflow-y: auto;
+	resize: none;
+	z-index: 9;
+}
+.sqlcontainer:focus{
+	outline: none;
+}
+.sql-placeholder{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 14px;
+	color: grey;
+	cursor: default;
+	z-index: 10;
+}
+.sql-placeholder ul{
+	margin-left: 20px;
+}
+.fields-wrapper{
+	width: 30%;
+	margin-top: 10px;
+}
+.fields{
+	margin-left: 8px;
+	list-style-type: none;
+	font-size: 16px;
+	cursor: default;
+	color: #086;
+}
+.fields li{
+	border: 1px solid #ccc;
+	margin-bottom: 2px;
+	cursor: move;
+}
+.fields li[disabled]{
+	opacity: .5;
+	cursor: not-allowed;
+}
+.fields li i{
+	padding-left: 10px;
+	color: #aaa;
+}
+.sql-form{
+	width: 68%;
+	margin-top: 10px;
+	/*padding-top: 5px;*/
+	/*border: 1px solid #ccc;*/
+}
+.inputs ol{
+	padding-left: 20px;
+}
+.inputs ol li{
+	border-top: 2px dashed #ccc;
+	padding: 4px 0;
+}
+.inputs ol li:first-child{
+	border-top: none;
+}
+.control-group{
+
+}
+.control-group:after{
+	clear: both;
+}
+.control-group .control-label{
+	text-align: right;
+	width: 170px;
+}
+.control-group .controls{
+	margin-left: 180px;
+}
+.control-group .control-label{
+	float: left;
+}
+.control-group .help-inline{
+	display: inline-block;
+	padding-left: 5px;
+	color: #555;
+	cursor: default;
+}
+.control-group .delete{
+	/*float: right;*/
+	margin-left: 10px; 
+	font-weight: 700;
+	color: red;
+	cursor: pointer;
+}
+.btn-group{
+	text-align: center;
+}
